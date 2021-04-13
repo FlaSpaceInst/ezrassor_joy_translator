@@ -1,0 +1,56 @@
+/**:
+  ros__parameters:
+    left_wheel_signal:
+      type: axis
+      index: 1
+    right_wheel_signal:
+      type: axis
+      index: 4
+    raise_front_arm_signal:
+      type: button
+      index: 5
+    lower_front_arm_signal:
+      type: axis
+      index: 5
+      accept: -1.0
+    raise_back_arm_signal:
+      type: button
+      index: 4
+    lower_back_arm_signal:
+      type: axis
+      index: 2
+      accept: -1.0
+    dig_front_drum_signal:
+      type: button
+      index: 3
+    dump_front_drum_signal:
+      type: button
+      index: 1
+    dig_back_drum_signal:
+      type: button
+      index: 2
+    dump_back_drum_signal:
+      type: button
+      index: 0
+    stop_routine_signal:
+      type: button
+      index: 10
+    auto_drive_routine_signal:
+      type: axis
+      index: 7
+      accept: 1.0
+    auto_dig_routine_signal:
+      type: axis
+      index: 6
+      accept: 1.0
+    auto_dump_routine_signal:
+      type: axis
+      index: 6
+      accept: -1.0
+    auto_dock_routine_signal:
+      type: axis
+      index: 7
+      accept: -1.0
+    full_autonomy_routine_signal:
+      type: button
+      index: 9
