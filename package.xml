@@ -1,20 +1,28 @@
 <?xml version="1.0"?>
-<!-- Package metadata for the ezrassor_joy_translator ROS package.
-     Written by Tiger Sachse. -->
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd"
+            schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
   <name>ezrassor_joy_translator</name>
+  <version>2.0.0</version>
+  <description>Translate joy messages for the EZRASSOR.</description>
+  <url type="website">
+    https://github.com/FlaSpaceInst/ezrassor_joy_translator
+  </url>
+  <maintainer email="ez.rassor@gmail.com">EZRASSOR Team</maintainer>
+  <author email="ez.rassor@gmail.com">EZRASSOR Team</author>
   <license>MIT</license>
-  <version>1.1.1</version>
-  <author email="tgsachse@gmail.com">Tiger Sachse</author>
-  <author email="Harrison.W.Black@gmail.com">Harrison Black</author>
-  <maintainer email="Harrison.W.Black@gmail.com">Harrison Black</maintainer>
-  <url type="website">https://github.com/FlaSpaceInst/NASA-E-RASSOR-Team</url>
-  <description>Translate Joy controller data for the EZ-RASSOR.</description>
 
-  <!-- A list of package dependencies. -->
+  <depend>geometry_msgs</depend>
   <depend>joy</depend>
-  <depend>rospy</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
   <depend>std_msgs</depend>
-  <depend>roslaunch</depend>
-  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>launch_testing</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
 </package>
