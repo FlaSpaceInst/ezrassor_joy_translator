@@ -32,25 +32,25 @@
     dump_back_drum_signal:
       type: button
       index: 3                    # Square
-    auto_dock_routine_signal:
-      type: axis
-      index: 7                    # D-Pad Up
-      accept: -1.0
-    auto_drive_routine_signal:
-      type: axis
-      index: 7                    # D-Pad Down
-      accept: 1.0
-    auto_dig_routine_signal:
-      type: axis
-      index: 6                    # D-Pad Right
-      accept: 1.0
-    auto_dump_routine_signal:
-      type: axis
-      index: 6                    # D-Pad Left
-      accept: -1.0
-    full_autonomy_routine_signal:
-      type: button
-      index: 9                    # Options
     stop_routine_signal:
       type: button
       index: 8                    # Share
+    auto_drive_routine_signal:
+      type: axis
+      index: 6                    # D-Pad Left
+      accept: -1.0
+    auto_dig_routine_signal:
+      type: axis
+      index: 7                    # D-Pad Up
+      accept: -1.0
+    auto_dump_routine_signal:
+      type: axis
+      index: 6                    # D-Pad Right
+      accept: 1.0
+    auto_dock_routine_signal:
+      type: axis
+      index: 7                    # D-Pad Down
+      accept: 1.0
+    full_autonomy_routine_signal:
+      type: button
+      index: 9                    # Options
