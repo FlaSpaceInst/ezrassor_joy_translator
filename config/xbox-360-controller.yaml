@@ -1,3 +1,11 @@
+# [Default controller config] 
+# For future controller configs based on this, ensure mappings are taken from the
+# data produced by the /joy topic.
+# `ros2 run joy joy_node` and
+# `ros2 topic echo /joy`
+#
+# In testing, it was discovered that `jstest` will invert the axes for D-Pad values
+# and should therefore not be used to determine mappings.
 /**:
   ros__parameters:
     left_wheel_signal:
@@ -38,19 +46,19 @@
     auto_drive_routine_signal:
       type: axis
       index: 6                    # D-Pad Left
-      accept: -1.0
+      accept: 1.0
     auto_dig_routine_signal:
       type: axis
       index: 7                    # D-Pad Up
-      accept: -1.0
+      accept: 1.0
     auto_dump_routine_signal:
       type: axis
       index: 6                    # D-Pad Right
-      accept: 1.0
+      accept: -1.0
     auto_dock_routine_signal:
       type: axis
       index: 7                    # D-Pad Down
-      accept: 1.0
+      accept: -1.0
     full_autonomy_routine_signal:
       type: button
       index: 7                    # Start

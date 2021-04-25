@@ -100,19 +100,19 @@ STOP_BACK_DRUM_MESSAGE = (
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 )
 EXECUTE_AUTO_DRIVE_ROUTINE_MESSAGE = (
-    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-)
-EXECUTE_AUTO_DIG_ROUTINE_MESSAGE = (
-    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-)
-EXECUTE_AUTO_DUMP_ROUTINE_MESSAGE = (
     [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 )
-EXECUTE_AUTO_DOCK_ROUTINE_MESSAGE = (
+EXECUTE_AUTO_DIG_ROUTINE_MESSAGE = (
     [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+)
+EXECUTE_AUTO_DUMP_ROUTINE_MESSAGE = (
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+)
+EXECUTE_AUTO_DOCK_ROUTINE_MESSAGE = (
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 )
 EXECUTE_FULL_AUTONOMY_ROUTINE_MESSAGE = (
