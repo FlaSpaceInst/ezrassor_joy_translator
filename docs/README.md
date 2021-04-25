@@ -28,7 +28,7 @@ command:
   ros2 launch ezrassor_joy_translator joy_translator.py [argument:=value]
 
 optional arguments:
-  device            joystick device name (default: /dev/input/js0)
+  device_id         joystick device id (default: 0)
   controller        desired controller configuration (default: xbox-360-controller.yaml)
 ```
 
@@ -39,10 +39,9 @@ Launch a joy translator with the default device and controller:
 ros2 launch ezrassor_joy_translator joy_translator.py
 ```
 
-Launch a joy translator with the device `/dev/input/js1`:
+Launch a joy translator with a device ID of `1` (corresponding to `/dev/input/js1`):
 ```
-ros2 launch ezrassor_joy_translator joy_translator.py \
-  device:=/dev/input/js1
+ros2 launch ezrassor_joy_translator joy_translator.py device_id:=1
 ```
 
 Launch a joy translator using the Nintendo Switch controller configuration:
