@@ -9,9 +9,9 @@ from launch_ros.actions import Node
 def generate_launch_description():
     """Create a joy_translator node with a launch description."""
     device_argument = DeclareLaunchArgument(
-        "device",
-        default_value="/dev/input/js0",
-        description="joystick device name",
+        "device_id",
+        default_value="0",
+        description="joystick device id",
     )
     controller_argument = DeclareLaunchArgument(
         "controller",
@@ -22,7 +22,7 @@ def generate_launch_description():
     joy_node = Node(
         package="joy",
         executable="joy_node",
-        parameters=[{"dev": LaunchConfiguration("device")}],
+        parameters=[{"device_id": LaunchConfiguration("device_id")}],
         output={"both": "screen"},
     )
     joy_translator_node = Node(

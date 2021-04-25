@@ -126,7 +126,12 @@ STOP_ROUTINE_MESSAGE = (
 
 
 def generate_test_description():
-    """Create a test description with the joy_translator launch file."""
+    """Create a test description with the joy_translator launch file.
+
+    We use a non-existent device ID to launch the system so that Joy spins
+    without producing any messages (otherwise it would pollute our inputs with
+    empty messages.
+    """
     joy_translator_launch_file = JOY_TRANSLATOR_LAUNCH_FILE_FORMAT.format(
         ament.get_package_share_directory(PACKAGE),
     )
@@ -138,7 +143,7 @@ def generate_test_description():
                     joy_translator_launch_file,
                 ),
                 launch_arguments={
-                    "device": "/dev/fake-device",
+                    "device_id": "999",
                     "controller": "xbox-360-controller.yaml",
                 }.items(),
             ),
