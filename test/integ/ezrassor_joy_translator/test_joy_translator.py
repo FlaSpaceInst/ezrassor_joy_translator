@@ -23,8 +23,6 @@ BACK_DRUM_ACTIONS_TOPIC = "back_drum_actions"
 ROUTINE_ACTIONS_TOPIC = "routine_actions"
 JOY_TOPIC = "joy"
 QUEUE_SIZE = 10
-LONG_CATCHUP_TIME = 1.0
-SHORT_CATCHUP_TIME = 0.1
 TIMEOUT = 2.0
 
 
@@ -223,7 +221,7 @@ class JoyTranslatorIntegrationTests(unittest.TestCase):
         )
 
         # Sleep for some time to give ROS a moment to warm up.
-        time.sleep(LONG_CATCHUP_TIME)
+        time.sleep(TIMEOUT)
 
     def tearDown(self):
         """Destroy testing infrastructure after each test.
@@ -245,8 +243,6 @@ class JoyTranslatorIntegrationTests(unittest.TestCase):
         message = sensor_msgs.msg.Joy()
         message.axes, message.buttons = raw_message
         self._joy_publisher.publish(message)
-        rclpy.spin_once(self._node, timeout_sec=TIMEOUT)
-        time.sleep(SHORT_CATCHUP_TIME)
 
     def _spin_for_subscribers(self):
         """Spin the node for a brief period of time.
@@ -255,7 +251,7 @@ class JoyTranslatorIntegrationTests(unittest.TestCase):
         collect all required outputs.
         """
         with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-            future = executor.submit(time.sleep, LONG_CATCHUP_TIME)
+            future = executor.submit(time.sleep, TIMEOUT)
             rclpy.spin_until_future_complete(
                 self._node,
                 future,
